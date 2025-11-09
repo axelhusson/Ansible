@@ -1,0 +1,18 @@
+---
+- hosts: {{ Env }} #Environnement variabilisé
+  gater_facts: true
+
+  tasks:
+    - name: récupération artefact
+      get_url:
+        url: https://artifactory....
+        dest: /tmp/archive.zip
+    - name: unzip du package
+      ansible.builtin.unarchive:
+        src: /tmp/archive.zip
+        dest: /apps/... # répertoire applicatif
+    - name: restart service
+      ansible.builtin.service:
+        name: {{ service }} #variabilisation du service a redémarrer
+        state: restarted
+      

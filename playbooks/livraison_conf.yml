@@ -1,0 +1,5 @@
+- name: Dépot de fichier de configuration
+  template:
+    src: ./source/conf.j2 #emplacement du fichier dans l'arborescence ansible
+    dest: /apps/conf/... #emplacement du fichier sur le serveur cible
+

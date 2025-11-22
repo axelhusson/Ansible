@@ -21,4 +21,4 @@ block
 
   - name: ajout du user dans les teams selon son role
 fin du block
- foreach user in orga
+ foreach user

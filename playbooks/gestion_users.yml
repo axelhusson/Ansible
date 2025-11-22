@@ -1,0 +1,11 @@
+vars:
+  - Orga1:
+    - user_HorsProd:
+      - team1
+    - user_IsoProd:
+      - team2
+      - team1
+    - user_Prod:
+      - team1
+      - team2
+      - team3

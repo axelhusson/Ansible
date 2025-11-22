@@ -1,8 +1,24 @@
 vars:
-  - Orga1:
-    - user_HorsProd:
-      - role1
-    - user_IsoProd:
-      - role2
-    - user_Prod:
-      - role3
+  - user_HorsProd:
+    - role1
+    - orga1
+  - user_IsoProd:
+    - role2
+    - orga2
+  - user_Prod:
+    - role3
+    - orga2
+
+block
+  - name: check si le user existe
+    ignore error: yes
+    register: user
+
+  - name: erreur si le user n'existe pas
+    msg: l'utilisateur machin n'a pas été trouvé 
+
+  - name: ajout du user dans l'organisation en tant que membre 
+
+  - name: ajout du user dans les teams selon son role
+fin du block
+ foreach user in orga
